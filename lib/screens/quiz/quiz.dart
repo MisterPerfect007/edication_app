@@ -7,7 +7,11 @@ class Quiz extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: ,
-      body: Container(),
+      body: Container(
+        child: Center(
+          child: Text('popo'),
+        )
+      ),
     );
   }
 }
