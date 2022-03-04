@@ -37,12 +37,12 @@ class _RemainingTimeProgressbarState extends State<RemainingTimeProgressbar> {
         children: [
           Container(
             width: screenWidth,
-            height: 5,
+            height: 4,
             color: const Color(0xffeeeeee),
           ),
           Container(
             width: screenWidth * _initialWidth,
-            height: 5,
+            height: 4,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
