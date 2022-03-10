@@ -2,11 +2,13 @@
 import 'package:flutter/material.dart';
 
 class QuestionChoice extends StatelessWidget {
+  final String question;
   final dynamic selectedAnswerIndex;
   final int answerIndex;
   final Function setSelectedAnswerIndex;
   const QuestionChoice({
     required this.selectedAnswerIndex,
+    required this.question,
     required this.answerIndex,
     required this.setSelectedAnswerIndex,
     Key? key,
@@ -24,7 +26,7 @@ class QuestionChoice extends StatelessWidget {
           borderRadius: const BorderRadius.all(Radius.circular(5)),
           boxShadow: [
             BoxShadow(
-                offset: Offset(0, 0),
+                offset: const Offset(0, 0),
                 color: Colors.grey.shade300,
                 blurRadius: 10)
           ],
@@ -62,7 +64,7 @@ class QuestionChoice extends StatelessWidget {
               width: 15,
             ),
             Text(
-              'Answer',
+              question,
               style: TextStyle(
                   color: _isSelected ? Colors.white : Colors.black54,
                   fontSize: 16,
