@@ -14,7 +14,7 @@
    {
         "id": "2",
         "time": 15,
-        "question": "Quelles spécialité n'est enseignée à NaN ?",
+        "question": "Quelles spécialités n'est enseignée à NaN ?",
         "answer_index": 0,
         "choices": [
             "Cuisine hotéliaire",

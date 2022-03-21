@@ -12,12 +12,6 @@ class QuestionChoices extends StatefulWidget {
 }
 
 class _QuestionChoicesState extends State<QuestionChoices> {
-  dynamic _selectedAnswerIndex;
-  void _setSelectedAnswerIndex(index) {
-    setState(() {
-      _selectedAnswerIndex = index;
-    });
-  }
 
   int questionIndex = 0;
 
@@ -38,7 +32,6 @@ class _QuestionChoicesState extends State<QuestionChoices> {
   
   @override
   Widget build(BuildContext context) {
-    // print('List: ${_quizController.allQuestions.toList()}');
     return Obx(() => _quizController.allQuestions.isNotEmpty ?  ListView.builder(
       shrinkWrap: true,
       physics: const ClampingScrollPhysics(),
@@ -48,13 +41,11 @@ class _QuestionChoicesState extends State<QuestionChoices> {
         return  Container(
           width: MediaQuery.of(context).size.width,
           padding: const EdgeInsets.only(top: 10, left: 15, right: 15),
-          // height: 100,
-          child: QuestionChoice(
+          child: Obx( () => QuestionChoice(
               question: _quizController.allQuestions[questionIndex].choices[index],
-              selectedAnswerIndex: _selectedAnswerIndex,
               answerIndex: index,
-              setSelectedAnswerIndex: _setSelectedAnswerIndex),
-        );
+              ),
+        ));
       }),
     ) : Container());
   }

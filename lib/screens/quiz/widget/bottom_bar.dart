@@ -61,6 +61,7 @@ class _BottomBarState extends State<BottomBar> {
               ),
               onPressed: () {
                 _quizController.nextQuestion();
+                
               },
               child: Text( isLastQuestion? 'Finir' : 'Suivant' ),
               ),
